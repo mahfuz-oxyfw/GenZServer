@@ -1,0 +1,41 @@
+{
+  "backgroundFrame": "#101010",
+  "red": "#DA1B32",
+  "redHover": "#F01B32",
+  "green": "#4DC048",
+  "greenHover": "#4DF048",
+  "whiteText": "#FFFFFF",
+  "boxBorder": "#3E3E3E",
+  "boxText": "#B2B2B2",
+  "boxBackground": "#212121",
+  "inputText": "#5E5E5E",
+  "missionColour": "#FFC30B",
+  "blue": "#699CC8",
+  "navbar": {
+    "buttonBackground": "#202020"
+  },
+  "chat": {
+    "chatboxBackground": "#303030",
+    "chatboxText": "#8E8E8E"
+  },
+  "popup": {
+    "inputBackground": "#3D3D3D",
+    "redBackground": "#6C1A1A",
+    "redBorder": "#8C1F1F",
+    "redText": "#D11616",
+    "greenBackground": "#1A6C20",
+    "greenBorder": "#1F8C26",
+    "greenText": "#16CD21"
+  },
+  "logs": {
+    "topText": "#797979",
+    "messageText": "#DFDFDF",
+    "dateText": "#696969"
+  },
+  "rank": {
+    "top": "#292929",
+    "bottom": "#2C2C2C",
+    "checkbox": "#1A1A1A",
+    "border": "#2F2F2F"
+  }
+}

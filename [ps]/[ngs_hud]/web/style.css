@@ -1,0 +1,332 @@
+@font-face {
+    font-family: mm;
+    src: url('assets/RobotoCondensed-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Oswald-Regular';
+    src: url('assets/Oswald-Regular.ttf');
+}
+
+body {
+    overflow: hidden;
+}
+
+.bg-css {
+    height: 920px;
+    width: 1900px;
+}
+
+#hud-component {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-left: 25px;
+    margin-bottom: 0px;
+}
+
+#health-container {
+    position: relative;
+    z-index: 1;
+}
+
+#health-progress {
+	width: 84px;
+	height: 100px;
+    overflow: visible;
+}
+
+#health-progress #health-track, #health-progress #health-fill{
+	fill: #000000e8;
+	stroke-width: 60;
+	transform: translate(290px, 800px)rotate(-120deg);
+}
+
+#health-track{
+	stroke: rgb(56, 71, 83);
+}
+
+#health-fill {
+	stroke-linecap: round;
+	stroke-dasharray: 2160;
+	stroke-dashoffset: 2160;
+	transition: stroke-dashoffset 1s;
+    stroke: #0BE2CA; /* Changed to new color */
+}
+
+#health-icon {
+    position: relative;
+    right: 60px;
+    bottom: 39px;
+    color: #0BE2CA; /* Changed to new color */
+    font-size: 25px;
+    filter: drop-shadow(0px 0px 8px #0BE2CA); /* Changed to new color */
+}
+
+.hud-icons {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-left: 44px;
+    margin-bottom: 17px;
+    display: flex;
+    flex-direction: column;
+    z-index: 0;
+}
+
+.hud-stuff {
+    display: flex; 
+}
+
+.fill-container-bg {
+    background-color: #000000b7;
+    padding-top: 10px;
+    padding-left: 23px;
+}
+
+.component-icon {
+    font-size: 15px;
+    color: white;
+    filter: drop-shadow(0px 0px 5px rgba(206, 206, 206, 0.801));
+    text-align: center;
+}
+
+#buffer {
+    width: 2px;
+}
+
+#buffer-semi {
+    width: 24px;
+    height: 46px; 
+    border-radius: 0 30px 30px 0;
+    padding: 0px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+}
+
+.icon-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.icon-color {
+    margin-top: 2px;
+    font-family: mm;
+    font-size: 12px;
+    color: white;
+}
+
+.weather-icon, .microphone-icon {
+    font-size: 11px;
+    color: white;
+    text-shadow: 2px 2px #000000;
+}
+
+.weather-text, .microphone-text, .street-text {
+    font-family: mm;
+    font-size: 12px;
+    color: white;
+    font-weight:550;
+    margin-left: 5px;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+
+.weather-border {
+    width: 40px;
+    height: 0px;
+    border: 2px solid #ffffff;
+    margin-top: 4px;
+    margin-right: 10px;
+    margin-left: 30px;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+	cursor: default;
+}
+
+.progress-container {
+    width: 0px;
+    height: 46px;
+    border-radius: 0 30px 30px 0;
+    background-color: #000000d0;
+    position: relative;
+    text-align: center;
+    line-height: 45px;
+}
+  
+.progress-bar {
+    height: 100%;
+    border-radius: 0 30px 30px 0;
+    background-color: #0BE2CA; /* Changed to new color */
+    width: 0%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: width 0.5s ease;
+}
+
+.progress-text {
+    filter: drop-shadow(0px 0px 5px rgb(22, 22, 22));
+    font-family: mm;
+    font-style: italic;
+    font-weight: bolder;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.noview{
+    display: none !important;
+}
+
+#vehicle-hud-component {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 0px;
+    margin-bottom: -8px;
+}
+
+#vehicle-hud-top {
+    stroke: #CACACA;
+    stroke-width: 1;
+}
+
+#vehicle-hud-speed {
+    stroke: #0BE2CA; /* Changed to new color */
+    stroke-width: 8; 
+    mask: url(#path-4-inside-3_33_10);
+    stroke-dasharray: 580;
+    stroke-dashoffset: 580;
+    transition: stroke-dashoffset 2s;
+}
+
+#vehicle-hud-rpm {
+    stroke: #FFC42D;
+    stroke-width: 3; 
+    stroke-dasharray: 155;
+    stroke-dashoffset: 155;
+    transition: stroke-dashoffset 2s;
+}
+
+#vehicle-hud, #player-hud {
+    display: flex;
+}
+
+#vehicle-hud-fuel {
+    stroke: #4BEB00;
+    stroke-width: 3; 
+    stroke-dasharray: 155;
+    stroke-dashoffset: 155;
+    transition: stroke-dashoffset 2s;
+}
+
+.fuel-icon {
+    position: absolute;
+    bottom: 25px;
+    left: 37px;
+    color: #4BEB00;
+    filter: drop-shadow(0px 0px 5px #4BEB00);
+}
+
+.belt-icon {
+    position: absolute;
+    bottom: 25px;
+    left: 135px;
+    font-size: 18px;
+    color: #0BE2CA; /* Changed to new color */
+    filter: drop-shadow(0px 0px 5px #0BE2CA); /* Changed to new color */
+}
+
+.engine-icon {
+    position: absolute;
+    bottom: 25px;
+    right: 48px;
+    color: #FFC42D;
+    filter: drop-shadow(0px 0px 5px #FFC42D);
+}
+
+.speed-text-container {
+    font-family: 'Oswald-Regular';
+    bottom: 65px;
+    left: 93px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.speed-text {
+    font-size: 55px;
+    font-style: italic;
+    font-weight: 100;
+    display: flex;
+    text-align: end;
+}
+
+.speed-white {
+    color: white;
+    filter: drop-shadow(0px 0px 5px #cccccce0);
+    width: 31px;
+}
+
+.speed-green {
+    color: #0BE2CA; /* Changed to new color */
+    filter: drop-shadow(0px 0px 5px #161616e0);
+    width: 31px;
+}
+
+.speed-unit {
+    font-size: 12px;
+    text-align: center;
+    font-style: italic;
+    font-weight: 100;
+}
+
+#money-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 6vh;
+    margin-right: -10%;
+    font-size: 25px;
+    text-align: center;
+    font-style: italic;
+    font-family: 'Oswald-Regular';
+    text-shadow: 2px 2px 4px rgb(0 0 0 / 71%);
+    color: #0BE2CA; /* Changed to new color */
+    display: none;
+    flex-direction: column;
+}
+
+.money-change {
+    font-size: 15px;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media only screen and (max-width: 1366px) and (min-height: 768px) {
+    #hud-component {
+        margin-bottom: -5px;
+    }
+}
+
+@media only screen and (max-width: 1280px) and (min-height: 720px) {
+    #hud-component {
+        margin-bottom: -5px;
+ }
+}

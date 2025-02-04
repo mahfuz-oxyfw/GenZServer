@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>MasterMind HUD</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+        <link href="style.css" rel="stylesheet" type="text/css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src = "js/params.js" defer></script>
+        <script src = "js/script.js" defer></script>
+    </head>
+    <body>
+
+        <div id="money-container"><div class="money-show"><i class="fa-solid fa-wallet"></i>&nbsp;&nbsp;$500</div><div class="money-change"><div style="position: relative; bottom:1px; font-size: 20px; font-family: mm;">-</div>&nbsp;$100</div></div>
+
+        <div id = 'hud-component'>
+            <div class = 'noview' id = 'health-container'>
+                <svg id="health-progress" id = "red noselect" x="0px" y="0px" viewBox="0 0 800 640">
+                    <path id="health-track" d="M723 314L543 625.77 183 625.77 3 314 183 2.23 543 2.23 723 314z"></path>
+                    <path id="health-fill" d="M723 314L543 625.77 183 625.77 3 314 183 2.23 543 2.23 723 314z"></path>
+                </svg>
+                <i class="fa-solid fa-heart" id = 'health-icon'></i>
+            </div>
+
+            <div class = 'hud-icons noview' >
+                <div class = 'hud-weather' style="display: flex; justify-content: end; margin-right: 25px;">
+                    <div class = 'weather-border'></div>
+                    <div class = 'weather-icon'><i class="fa-solid fa-sun"></i></div>
+                    <text class = 'weather-text' id = 'weather'>SUNNY</text>
+                    <text class = 'weather-text'>|</text>
+                    <text class = 'weather-text' id = 'weather-time'>06:22 PM</text>
+                </div>
+
+                <div class = 'hud-all-component'>
+                    <div class = 'hud-stuff'>
+                        <div id = 'buffer' class="fill-container-bg"></div>
+
+                        <div id = 'player-hud'>
+                            <div id = 'armor-container' class="fill-container-bg icon-container">
+                                <i class="fas fa-shield-alt component-icon"></i>
+                                <text class = 'icon-color'>50%</text>
+                            </div>
+                            <div id = 'food-container' class="fill-container-bg icon-container">
+                                <i class="fas fa-hamburger component-icon"></i>
+                                <text class = 'icon-color'>50%</text>
+                            </div>
+                            <div id = 'water-container' class="fill-container-bg icon-container">
+                                <i class="fas fa-tint component-icon"></i>
+                                <text class = 'icon-color'>50%</text>
+                            </div>
+                            <div id = 'stress-container' class="fill-container-bg icon-container">
+                                <i class="fas fa-brain component-icon"></i>
+                                <text class = 'icon-color'>50%</text>
+                            </div>
+                            <div id = 'oxygen-container' class="fill-container-bg icon-container">
+                                <i class="fas fa-lungs component-icon"></i>
+                                <text class = 'icon-color'>50%</text>
+                            </div>
+                        </div>
+
+                        <div id = 'vehicle-hud' class = 'noview'>
+                            <div id = 'engine-container' class="fill-container-bg icon-container">
+                                <i class="fas fa-oil-can component-icon"></i>
+                                <text class = 'icon-color'>50%</text>
+                            </div>
+                            <div id = 'harness-container' class="fill-container-bg icon-container">
+                                <i class="fas fa-user-slash component-icon"></i>
+                                <text class = 'icon-color'>50%</text>
+                            </div>
+                            <div id = 'cruise-container' class="fill-container-bg icon-container">
+                                <i class="fas fa-tachometer-alt-fast component-icon"></i>
+                                <text class = 'icon-color'>50%</text>
+                            </div>
+                            <div id = 'nos-container' class="fill-container-bg icon-container">
+                                <i class="fas fa-meteor component-icon"></i>
+                                <text class = 'icon-color'>50%</text>
+                            </div>
+                        </div>
+                        
+                        <div id = 'buffer-semi' class="fill-container-bg"></div>   
+                    </div>
+
+                    <div class="progress-container noview">
+                        <div class="progress-bar"></div>
+                        <div class="progress-text">WORKING</div>
+                    </div>
+                </div>
+
+                <div class = 'hud-microphone' style="display: flex; margin-top: 2px; margin-left: 25px;">
+                    <div class = 'microphone-icon'><i class="fa-solid fa-microphone"></i></div>
+                    <text class = 'microphone-text'>NORMAL</text>
+                    <text class = 'street-text noview'>|</text>
+                    <text id = 'street-name' class = 'street-text noview'>21 Sinner Street</text>
+                </div>
+            </div>
+        </div>
+        
+        <div id = 'vehicle-hud-component' class = 'noview'>
+
+            <svg width="300" height="231" viewBox="0 0 370 281" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M250.714 251.796C271.817 236.071 287.456 213.894 295.361 188.485C303.266 163.076 303.026 135.757 294.675 110.497C286.324 85.2364 270.297 63.3492 248.922 48.0138C227.547 32.6784 201.936 24.6932 175.809 25.2179C149.682 25.7426 124.399 34.7498 103.632 50.9315C82.8647 67.1133 67.6946 89.6269 60.3246 115.203C52.9546 140.779 53.7684 168.086 62.6478 193.158C71.5272 218.231 88.0099 239.763 109.702 254.628L110.106 254.015C88.5411 239.237 72.1555 217.832 63.3283 192.908C54.5012 167.983 53.6922 140.837 61.0188 115.411C68.3454 89.9857 83.4262 67.6046 104.071 51.5181C124.716 35.4317 149.85 26.4775 175.823 25.9559C201.796 25.4343 227.256 33.3724 248.506 48.6176C269.755 63.8627 285.688 85.621 293.989 110.733C302.291 135.844 302.53 163.002 294.671 188.262C286.813 213.521 271.266 235.568 250.288 251.2L250.714 251.796Z" stroke="#CACACA" stroke-width="2"/>
+                <g filter="url(#filter0_d_33_10)">
+                <path id = "vehicle-hud-speed" d="M112.991 241.672C93.9987 227.52 79.9234 207.561 72.8087 184.693C65.694 161.824 65.9102 137.238 73.4262 114.503C80.9421 91.7687 95.3662 72.0703 114.604 58.2684C133.842 44.4665 156.891 37.2799 180.406 37.7521C203.92 38.2243 226.675 46.3308 245.365 60.8944C264.055 75.4579 277.708 95.7202 284.341 118.739C290.974 141.757 290.242 166.334 282.251 188.899C274.259 211.464 259.425 230.842 239.902 244.221" />
+                </g>
+                <g filter="url(#filter1_d_33_10)">
+                <path d="M50.4204 228.235C35.7751 204.694 28.2487 175.976 29.0592 146.726C29.8697 117.476 38.9696 89.4065 54.8864 67.0595" stroke="#9D9D9D" stroke-width="3" />
+                </g>
+                <g filter="url(#filter2_d_33_10)">
+                <path id = "vehicle-hud-fuel" d="M50.4204 228.235C35.7751 204.694 28.2487 175.976 29.0592 146.726C29.8697 117.476 38.9696 89.4065 54.8864 67.0595" />
+                </g>
+                <g filter="url(#filter3_d_33_10)">
+                <path d="M305.58 228.235C320.225 204.694 327.751 175.976 326.941 146.726C326.13 117.476 317.03 89.4065 301.114 67.0595" stroke="#9D9D9D" stroke-width="3" />
+                </g>
+                <g filter="url(#filter4_d_33_10)">
+                <path id = "vehicle-hud-rpm" d="M305.58 228.235C320.225 204.694 327.751 175.976 326.941 146.726C326.13 117.476 317.03 89.4065 301.114 67.0595" />
+                </g>
+                <defs>
+                <filter id="filter0_d_33_10" x="37.6265" y="0.730225" width="295.205" height="279.965" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                <feOffset dx="7"/>
+                <feGaussianBlur stdDeviation="17"/>
+                <feComposite in2="hardAlpha" operator="out"/>
+                <feColorMatrix type="matrix" values="0 0 0 0 0.988235 0 0 0 0 0.00392157 0 0 0 0 0.219608 0 0 0 1 0"/>
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_33_10"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_33_10" result="shape"/>
+                </filter>
+                <filter id="filter1_d_33_10" x="0.5" y="32.1893" width="96.6082" height="230.838" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                <feOffset dx="7"/>
+                <feGaussianBlur stdDeviation="17"/>
+                <feComposite in2="hardAlpha" operator="out"/>
+                <feColorMatrix type="matrix" values="0 0 0 0 0.301961 0 0 0 0 0.607843 0 0 0 0 0.67451 0 0 0 1 0"/>
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_33_10"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_33_10" result="shape"/>
+                </filter>
+                <filter id="filter2_d_33_10" x="0.5" y="32.1893" width="96.6082" height="230.838" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                <feOffset dx="7"/>
+                <feGaussianBlur stdDeviation="17"/>
+                <feComposite in2="hardAlpha" operator="out"/>
+                <feColorMatrix type="matrix" values="0 0 0 0 0.137255 0 0 0 0 1 0 0 0 0 0.223529 0 0 0 1 0"/>
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_33_10"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_33_10" result="shape"/>
+                </filter>
+                <filter id="filter3_d_33_10" x="272.892" y="32.1893" width="96.6082" height="230.838" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                <feOffset dx="7"/>
+                <feGaussianBlur stdDeviation="17"/>
+                <feComposite in2="hardAlpha" operator="out"/>
+                <feColorMatrix type="matrix" values="0 0 0 0 0.301961 0 0 0 0 0.607843 0 0 0 0 0.67451 0 0 0 1 0"/>
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_33_10"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_33_10" result="shape"/>
+                </filter>
+                <filter id="filter4_d_33_10" x="272.892" y="32.1893" width="96.6082" height="230.838" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                <feOffset dx="7"/>
+                <feGaussianBlur stdDeviation="17"/>
+                <feComposite in2="hardAlpha" operator="out"/>
+                <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0.768627 0 0 0 0 0.180392 0 0 0 1 0"/>
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_33_10"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_33_10" result="shape"/>
+                </filter>
+                </defs>
+            </svg>
+                
+                
+            <i class="fa-solid fa-gas-pump fuel-icon"></i>
+            <i class="fas fa-user-slash belt-icon"></i>   
+            <i class="fas fa-tachometer-alt-fast engine-icon"></i>
+                
+            <div class = 'speed-text-container'>
+                <div class="speed-text"><span class="speed-white">0</span><span class="speed-white">0</span><span class="speed-green">0</span></div>
+                <text class="speed-unit">KMPH</text>
+            </div>
+        </div>
+    </body>
+</html>

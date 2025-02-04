@@ -1,0 +1,54 @@
+{
+    "Rules": [
+        {
+            "title": "Helpful Hints",
+            "rule": "If this is your first time in the city, please check your Extended Texture Budget in your graphics settings and make sure it is turned up so that your textures load properly. Also, ensure that the correct headset and microphone are selected in your voice settings. The default push-to-talk button is 'N' on your keyboard."
+        }
+    ],
+
+	"Gallery": ["image1.png", "image2.png", "image3.png", "image4.png", "image5.png", "image6.png"],
+
+	"Team": [
+		{
+			"img": "izzy.png",
+			"rank": "OWNER",
+			"name": "King Lion"
+		}
+	],
+
+	"Updates": [
+		{
+			"img": "update1.png",
+			"title": "UPDATE 0.2",
+			"update": "Lorem ipsum dolor sit amet consectetur. Urna nulla pharetra mauris eu nulla in interdum sagittis. Nulla tincidunt nam mattis purus consectetur. Cursus lorem tempus porta in pretium."
+		}
+	],
+
+	"Music": [
+		{
+			"name": "Midnight In LA",
+			"author": "Big Sad 1900",
+			"path": "musics/1028.mp3"
+		}
+		
+	],
+
+	"Keys": {
+		"TAB": {
+			"title": "Scoreboard",
+			"description": "Open your scoreboard"
+		},
+		"1": {
+			"title": "Phone",
+			"description": "Open your phone"
+		},
+		"2": {
+			"title": "Inventory",
+			"description": "Open your inventory"
+		}
+	},
+
+	"Discord": "https://discord.gg/Kf8uDZfc3w",
+	"Instagram": "#",
+	"Youtube": "#"
+}

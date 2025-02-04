@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>TimendDateDisplay-FiveM</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' href='style.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='https://fonts.googleapis.com/css?family=Roboto'>
+    <link rel='stylesheet' type='text/css' media='screen' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <style>
+        @keyframes rgbTextShadowAnimation {
+            /* 0% { text-shadow: 2px 2px rgb(255, 255, 255); }
+            25% { text-shadow: 2px -2px rgb(255, 255, 255); }
+            50% { text-shadow: -2px -2px rgb(255, 255, 255); }
+            75% { text-shadow: -2px 2px rgb(255, 255, 255); }
+            100% { text-shadow: 2px 2px rgb(255, 255, 255); } */
+        }
+        body {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #container {
+            display: flex;
+            align-items: center;
+            margin-top: 10px; /* Position at the top */
+        }
+        h1 {
+            font-size: 20px;
+            font-weight: 900;
+            margin-left: 10px; /* Add margin to create a gap */
+            font-family: Monospace; /* Change font to Monospace */
+            color: white; /* Set text color to white */
+            /* text-shadow: 1px 1px 5px #39ff14, -1px -1px 5px #39ff14; /* Update text glow to 1px neon color */ */
+        }
+        h1 span {
+            display: inline-block;
+            animation: rgbTextShadowAnimation 10s linear infinite; /* Slow down animation */
+            padding: 2px; /* Add padding to each word */
+        }
+        #ServerLogo {
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <!-- <img id="ServerLogo" src="logo.png"> -->
+        <!-- <div id="container">
+            <header>
+                <img src="../html/logo.png" alt="header">
+            </header>
+        </div> -->
+        <h1 id="TimeAndDate"><b><span>No</span> <span>Time</span> <span>Yet</span></b></h1>
+    </div>
+    <script src="time.js"></script>
+</body>
+</html>

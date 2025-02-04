@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translation-id="MyDutyPanelTitle">My Duty Panel</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://moment.github.io/luxon/global/luxon.min.js"></script>
+    <script src="index.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+
+<body style="background-color: transparent !important;">
+    <div id="panel-container">
+        <button id="close-panel-btn" onclick="closeDutyMenu();" data-translation-id="ClosePanel">X</button>
+
+        <div id="my-panel-container">
+            <button id="Open-Company-Management" onclick="OpenCompanyManagement();"
+                data-translation-id="CompanyManagement">Company Management</button>
+            <h1 data-translation-id="MyDutyPanel">My Duty Panel</h1>
+
+            <div class="radio-container">
+                <input type="radio" name="view" id="day" checked>
+                <label for="day" data-translation-id="Day">Day</label>
+
+                <input type="radio" name="view" id="week">
+                <label for="week" data-translation-id="Week">Week</label>
+
+                <input type="radio" name="view" id="month">
+                <label for="month" data-translation-id="Month">Month</label>
+
+                <input type="radio" name="view" id="year">
+                <label for="year" data-translation-id="Year">Year</label>
+            </div>
+
+            <div id="day-buttons" style="text-align: center; margin-bottom: 10px;">
+                <button id="prevPeriod">&#8249;</button>
+                <button id="nextPeriod">&#8250;</button>
+			</div>
+			
+            <canvas id="myChart"></canvas>
+        </div>
+
+        <div id="Company-panel-container">
+
+            <button id="Open-Company-Management" onclick="OpenMyDutyPanel();"
+                data-translation-id="MyDutyPanel">My Duty Panel</button>
+            <h1 data-translation-id="CompanyDutyPanel">Company Duty Panel</h1>
+
+            <div class="radio-container">
+                <input type="radio" name="view" id="day" checked>
+                <label for="day" data-translation-id="Day">Day</label>
+
+                <input type="radio" name="view" id="week">
+                <label for="week" data-translation-id="Week">Week</label>
+
+                <input type="radio" name="view" id="month">
+                <label for="month" data-translation-id="Month">Month</label>
+
+                <input type="radio" name="view" id="year">
+                <label for="year" data-translation-id="Year">Year</label>
+            </div>
+            <div id="day-buttons" style="text-align: center; margin-bottom: 10px;">
+                <button id="prevDay">&#8249;</button>
+                <button id="nextDay">&#8250;</button>
+            </div>
+            <div id="selectedDayLabel" style="text-align: center;"
+                data-translation-id="SelectedDayLabel"></div>
+
+
+            <canvas id="employeesChart"></canvas>
+        </div>
+        <div id="loading-spinner"></div>
+
+    </div>
+</body>
+
+</html>

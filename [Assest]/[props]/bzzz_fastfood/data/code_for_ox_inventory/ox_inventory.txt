@@ -1,0 +1,1 @@
+https://github.com/Mrs-BzZz/food_coords/blob/main/ox_inventory/bzzz_custom_fastfood.lua

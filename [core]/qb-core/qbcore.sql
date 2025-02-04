@@ -1,0 +1,2 @@
+ALTER TABLE `players` ADD `level` INT(11) NOT NULL DEFAULT "0";
+ALTER TABLE `players` ADD `levelcount` VARCHAR(50) NOT NULL DEFAULT "0";

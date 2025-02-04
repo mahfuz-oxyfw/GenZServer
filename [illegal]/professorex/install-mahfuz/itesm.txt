@@ -1,0 +1,1 @@
+["trap_phone"]                      = {["name"] = "trap_phone",                  ["label"] = "trap phone",                         ["weight"] = 100,         ["type"] = "item",         ["image"] = "marijuana_phone.png",             ["unique"] = true,         ["useable"] = true,     ["shouldClose"] = false,   ["combinable"] = nil,   ["description"] = "trap phone."},

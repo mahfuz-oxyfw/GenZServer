@@ -1,0 +1,14 @@
+{
+    "MyDutyPanelTitle": "Mon Tableau de Service",
+    "ClosePanel": "X",
+    "CompanyManagement": "Gestion de l'Entreprise",
+    "MyDutyPanel": "Mon Tableau de Service",
+    "Day": "Jour",
+    "Week": "Semaine",
+    "Month": "Mois",
+    "Year": "Année",
+    "CompanyDutyPanel": "Tableau de Service de l'Entreprise",
+    "SelectedDayLabel": "Jour Sélectionné",
+    "HoursOfDutyLabel": "Heures de Service",
+	"HoursOfEmployeesDutyLabel": "Heures Totales des Employés"
+}

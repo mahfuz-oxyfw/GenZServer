@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/qtip2/3.0.3/jquery.qtip.min.css" />
+    <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+    <div class="draggable">
+        <div class="radio-wrapper animate__animated">
+            <div class="wrapper">
+                <img src="image/2.png" class="radio-image bg-2">
+                <div class="main-container dark-mode modal-2">
+                    <div class="nav-panel">
+                        <div class="left-side-panel">
+                            <p class="online-text"></p>
+                            <h3 class="panel-time">12:00</h3>
+                        </div>
+                        <div class="right-side-panel">
+                            <div>
+                                <i class="fa-solid fa-signal"></i>
+                            </div>
+                            <i class="fa-solid fa-battery-three-quarters"></i>
+                        </div>
+                    </div>
+                    <div class="notification-panel animate__animated">
+                        <div class="notification-icon-container">
+                            <i class="fa-solid fa-shuffle notification-icon"></i>
+                        </div>
+                        <div class="notification-content">
+                            <div class="notification-title">
+                                <p>Radio</p>
+                            </div>
+                            <div class="notification-sub-title">
+                                <p>Shuffle To find Channels</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="display-screen-panel">
+                        <div class="settings-screen">
+                            <div class="settings-title">
+                                <h3>Settings</h3>
+                            </div>
+                            <div class="setting-container">
+                                <div class="theme-container-box">
+                                    <div class="theme-title">
+                                        <h3>Apperance</h3>
+                                    </div>
+                                    <div class="theme-container">
+                                        <div class="theme-box">
+                                            <div class="light-box">
+                                                <div class="light-icon-box">
+                                                    <i class="fa-solid fa-sun light-image"></i>
+                                                </div>
+                                                <div class="light-title-box">Light</div>
+                                            </div>
+                                            <div class="dark-box">
+                                                <div class="dark-icon-box">
+                                                    <i class="fa-solid fa-circle-half-stroke dark-image"></i>
+                                                </div>
+                                                <div class="dark-title-box">Dark</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="colour-theme-container-box">
+                                    <div class="brightness-title">
+                                        <h3>Colour</h3>
+                                    </div>
+                                    <div class="colour-box-container">
+                                    <div class="colour-box-main-container">
+                                        <div class="colour-box blue-theme"></div>
+                                        <div class="colour-box green-theme"></div>
+                                        <div class="colour-box orange-theme"></div>
+                                        <div class="colour-box purple-theme"></div>
+                                        <div class="colour-box yellow-theme"></div>
+                                        <i class="fa-solid fa-rotate-right reset-color"></i>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="brightness-container-box">
+                                    <div class="brightness-title">
+                                        <h3>Brigtness</h3>
+                                    </div>
+                                    <div class="bright-container">
+                                        <div class="bright-scale-box">
+                                            <div class="bright-left-icon-container">
+                                                <i class="fa-regular fa-sun"></i>
+                                            </div>
+                                            <div class="bright-scale-bar-container">
+                                                <input type="range" min="0" max="100" value="100" class="brightness-range-slider" id="myRange">
+                                            </div>
+                                            <div class="bright-right-icon-container">
+                                                <i class="fa-solid fa-sun"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nick-name-container-box">
+                                    <div class="brightness-title">
+                                        <h3>Radio Nick Name</h3>
+                                    </div>
+                                    <div class="nick-name-container">
+                                        <div class="bright-scale-box">
+                                            <div class="nickname-type-container">
+                                                <input placeholder="Write Nickname" type="search" class="nickname-input">
+                                            </div>
+                                            <div class="save-nickname-icon-container">
+                                                <i class="fa-solid fa-circle-check"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="setting-container-box">
+                                    <div class="draggable-box-container">
+                                        <div class="box-left-side">
+                                            <i class="fa-solid fa-up-down-left-right drag-icon"></i>
+                                            <h3 class="setting-box-titles">Position Radio</h3>
+                                        </div>
+                                        <div class="drag-reset-btn-container">
+                                            <i class="fa-solid fa-rotate-right"></i>
+                                        </div>
+                                        <div class="box-right-side">
+                                            <div class="drag-container">
+                                                <input type="checkbox" class="drag-checkbox" id="drag-checkbox">
+                                                <label class="drag-switch" for="drag-checkbox">
+                                                    <span class="drag-slider"></span>
+                                                </label>
+                                            </div>
+                                        </div>                                    
+                                    </div>
+                                </div>
+                                <div class="setting-container-box">
+                                    <div class="draggable-box-container">
+                                        <div class="box-left-side">
+                                            <i class="fa-solid fa-up-down-left-right drag-icon"></i>
+                                            <h3 class="setting-box-titles">Position Overlay</h3>
+                                        </div>
+                                        <div class="box-right-side">
+                                            <div class="drag-container">
+                                                <input type="checkbox" class="drag-overlay-checkbox" id="drag-overlay-checkbox">
+                                                <label class="drag-switch" for="drag-overlay-checkbox">
+                                                    <span class="drag-slider"></span>
+                                                </label>
+                                            </div>
+                                        </div>                                    
+                                    </div>
+                                </div>
+                                <div class="setting-container-box">
+                                    <div class="draggable-box-container">
+                                        <div class="box-left-side">
+                                            <i class="fa-solid fa-magnifying-glass-plus drag-icon"></i>
+                                            <h3 class="setting-box-titles">Resize</h3>
+                                        </div>
+                                        <div class="box-right-side">
+                                            <div class="zoom-buttons">
+                                                <i class="fa-solid fa-square-plus zoomInBtn"></i>
+                                                <div id="zoomLevel">1.0</div>
+                                                <i class="fa-solid fa-square-minus zoomOutBtn"></i>
+                                            </div>
+                                        </div>                                    
+                                    </div>
+                                </div>
+                                <div class="setting-container-box">
+                                    <div class="use-mouse-box-container">
+                                        <div class="box-left-side">
+                                            <i class="fa-solid fa-computer-mouse mouse-icon"></i>
+                                            <h3 class="setting-box-titles">Mouse Control</h3>
+                                        </div>
+                                        <div class="box-right-side">
+                                            <div class="use-mouse-container">
+                                                <input type="checkbox" class="use-mouse-checkbox" id="mouse-checkbox">
+                                                <label class="use-mouse-switch" for="mouse-checkbox">
+                                                <span class="use-mouse-slider"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="setting-container-box member-overlay">
+                                    <div class="use-mouse-box-container">
+                                        <div class="box-left-side">
+                                            <i class="fa-solid fa-users members-icon"></i>
+                                            <h3 class="setting-box-titles">Display Members</h3>
+                                        </div>
+                                        <div class="box-right-side">
+                                            <div class="use-mouse-container">
+                                                <input type="checkbox" class="use-mouse-checkbox" id="member-checkbox">
+                                                <label class="use-mouse-switch" for="member-checkbox">
+                                                <span class="use-mouse-slider"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="members-screen">
+                            <div class="members-title">
+                                <h3>Members</h3>
+                            </div>
+                            <div class="members-container"></div>
+                        </div>
+                        <div class="chat-screen">
+                            <div class="chat-title">
+                                <h3>Inbox</h3>
+                                <i class="fa-solid fa-user-shield blocked-players-btn"></i>
+                            </div>
+                            <div class="chat-middle-box">
+                                <div class="chat-search-field-container">
+                                    <div class="chat-search-field">
+                                        <input type="text" placeholder="Search Inbox" class="search-contact-input">
+                                        <i class="fa-solid fa-magnifying-glass search-contact-icon"></i>
+                                    </div>
+                                </div>
+                                <div class="chat-box-container"></div>
+                            </div>
+                            <div class="block-list-container"></div>
+                            <div class="main-chat-container">
+                                <div class="chat-player-name-container">
+                                    <div class="chat-box-left-icon">
+                                        <i class="fa-solid fa-signal chat-block-btn green"></i>
+                                    </div>
+                                    <div class="chat-name">
+                                        <span></span>
+                                    </div>
+                                    <div class="chat-box-right-icon">
+                                        <i class="fa-solid fa-ban player-chat-block tooltip"title="Block"></i>
+                                        <i class="fa-solid fa-circle-left close-chat-btn"></i>
+                                    </div>
+                                </div>
+                                <div class="middle-chat-box-container">
+                                    <div class="main-chat-box-container" id="chat-messages-container"></div>
+                                </div>
+                                <div class="chat-send-container">
+                                <div class="message-write-container">
+                                    <input type="text" placeholder="Write message..." id="msg" class="write-message"/>
+                                </div>
+                                    <div class="message-send-arrow">
+                                        <i class="fa-solid fa-paper-plane message-send-icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="channel-screen">
+                            <div class="channels-title">
+                                <h3>Channels</h3>
+                                <i class="fa-solid fa-circle-plus add-plus-icon"></i>
+                            </div>
+                            <div class="channels-select-bar-connect">
+                                <div class="channels-nav-bar">
+                                    <div class="channels-option">
+                                        <h4 class="fav-btn channels-text selected-fav">Favorites</h4>
+                                    </div>
+                                    <div class="channels-option">
+                                        <h4 class="recent-btn channels-text">Recent</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="channels-favorites-container"></div>
+                            <div class="channels-recents-container"></div>
+                            <div class="new-add-fav-container">
+                                <div class="signal-image-cont">
+                                    <img src="image/signal.png" class="signal-image">
+                                </div>
+                                <div class="new-fav-title">
+                                    <h3 class="fav-title">Add favorite</h3>
+                                </div>
+                                <div class="add-new-channel-container">
+                                    <input type="text" placeholder="Channel Name" class="add-channel-name">
+                                </div>
+                                <div class="add-new-buttons-container">
+                                    <h3 class="fav-add-btn">ADD</h3>
+                                    <h3 class="fav-cancel-btn">CLOSE</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="home-screen">
+                            <div class="home-nav-bar">
+                                <!-- <i class="fa-solid fa-lightbulb flashlight-icon"></i> -->
+                                <i class="fa-regular fa-lightbulb flashlight-icon"></i>
+                            
+                                <div class="jammer-signal-box">
+                                    <i class="fa-solid fa-tower-cell jammer-icon"></i>
+                                    <h2 style="font-size: 1.2vh;"></h2>
+                                </div>
+                                <i class="fa-solid fa-power-off switch-icon"></i>
+                            </div>
+                            <div class="home-panel-1">
+                                <div class="frequency-box-container">
+                                    <div class="frequency-box">
+                                        <!-- <i class="fa-solid fa-star instant-fav-btn"></i> -->
+                                        <div class="frequency-join-panel">
+                                            <input type="text" class="frequency-text" placeholder="00.00">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="connect-btn-container">
+                                    <h3 class="connect-btn"></h3>
+                                </div>
+                                <div class="other-options-box">
+                                    <div class="other-options option1 alert-btn">
+                                        <i class="fa-solid fa-triangle-exclamation"></i>
+                                    </div>
+                                    <div class="other-options option2 lock-btn">
+                                        <i class="fa-solid fa-lock-open"></i>
+                                    </div>
+                                    <div class="other-options option2 member-btn">
+                                        <i class="fa-solid fa-users"></i>
+                                    </div>
+                                    <div class="other-options option3 flash-btn">
+                                        <i class="fa-solid fa-volume-high volume-icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="home-panel-middle">
+                                <div class="location-container">
+                                <div class="location-icon">
+                                    <i class="fa-solid fa-map-location"></i>
+                                </div>
+                                <p class="location-title">Los Santos</p>
+                                </div> 
+                            </div>
+                        </div>
+                        <div class="volume-control-container">
+                            <div class="volume-control-image-cont">
+                                <img src="image/volume.svg" class="volume-image">
+                            </div>
+                            <h4>Volume</h4>
+                            <div class="volume-control">
+                                <i class="fa-solid fa-xmark close-volume"></i>
+                                <i class="fa-solid fa-square-minus volume-minus"></i>
+                                <div class="volume-label">50</div>
+                                <i class="fa-solid fa-square-plus volume-plus"></i>
+                            </div>
+                        </div>
+                        <div class="alert-container">
+                            <h4 class="alert-title">Alert Everyone!</h4>
+                            <h5 class="alert-message">Are you sure you want to alert everyone?</h5>
+                            <div class="alert-btn-container">
+                                <span class="alert-yes-btn">Yes</span>
+                                <span class="alert-no-btn">No</span>
+                            </div>
+                        </div>
+                        <div class="channel-lock-container">
+                            <div class="lock-icon-cont">
+                                <img src="image/lock.svg" class="lock-icon">
+                            </div>
+                            <div class="lock-title">Lock Channel</div>
+                            <div class="lock-input-container">
+                                <input type="text" placeholder="Enter Password" class="channel-lock-input">
+                            </div> 
+                            <div class="lock-new-cont">
+                                <div class="channel-lock-btn">
+                                    <i class="fa-solid fa-lock"></i>
+                                </div>
+                                <div class="lock-close-btn">
+                                    <h2>Close</h2>
+                                </div>
+                            </div>      
+                        </div>  
+                        <div class="channel-password-container">
+                            <div class="lock-icon-cont">
+                                <img src="image/lock.svg" class="lock-icon">
+                            </div>
+                            <div class="lock-title">Locked Channel</div>
+                            <div class="lock-input-container">
+                                <input type="text" placeholder="Enter Password" class="channel-password-input">
+                            </div> 
+                            <div class="lock-new-cont">
+                                <div class="channel-password-btn">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </div>
+                                <div class="pass-close-btn">
+                                    <h2>Close</h2>
+                                </div>  
+                            </div> 
+                        </div>                   
+                    </div>
+                    <div class="screens-panel">
+                        <div class="screens-container">
+                            <div class="screen-box home-btn tooltip" title="Home">
+                                <i class="fa-solid fa-house screen-icon"></i>
+                            </div>
+                            <div class="screen-box connection-btn tooltip" title="Connect">
+                                <i class="fa-solid fa-shuffle screen-icon"></i>
+                            </div>
+                            <div class="screen-box msg-btn tooltip" title="Message">
+                                <i class="fa-solid fa-message screen-icon"></i>
+                            </div>
+                            <div class="screen-box settings-btn tooltip" title="Settings">
+                                <i class="fa-solid fa-gear screen-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="no-signal-container">
+                    <div><i class="fa-solid fa-satellite-dish fa-beat-fade fa-2xl"></i></div>
+                    <h4>Network Error</h4>
+                    <h5 class="no-signal-sub-text">Having trouble connecting to server!<br>Restricted zones and Jammers can affect your network.</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="members-draggable">
+        <div class="radio-members-onscreen">
+            <div class="radio-screen-title">
+                <h3>Radio Members</h3>
+            </div>
+            <hr class="radio-line"> </hr>
+        </div>
+        <div class="close-member-list-btn-cont">
+            <div class="overlay-exit">Save Overlay</div>
+            <div class="overlay-reset">Reset Overlay</div>
+        </div>
+    </div>
+    <div class="emergency-cont">
+        <div class="title-emer">Alert</div>
+        <div class="sub-title">Require Assistance</div>
+        <div class="sub-title-pressed">Alerted By : <span>Test</span></div>
+    </div>
+    <div class="jammer-box-cont">
+        <img src="image/jammer.png" class="jammer-image">
+        <div class="jammer-content-box">
+            <div aria-label="Loading..." role="status" class="loader">
+                <svg class="icon" viewBox="0 0 256 256">
+                  <line x1="128" y1="32" x2="128" y2="64" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line>
+                  <line x1="195.9" y1="60.1" x2="173.3" y2="82.7" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line>
+                  <line x1="224" y1="128" x2="192" y2="128" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line>
+                  <line x1="195.9" y1="195.9" x2="173.3" y2="173.3" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line>
+                  <line x1="128" y1="224" x2="128" y2="192" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line>
+                  <line x1="60.1" y1="195.9" x2="82.7" y2="173.3" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line>
+                  <line x1="32" y1="128" x2="64" y2="128" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line>
+                  <line x1="60.1" y1="60.1" x2="82.7" y2="82.7" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line>
+                </svg>
+                <span class="loading-text">Scanning...</span>
+            </div>
+            <div class="jammer-title-cont">
+                <div class="jammer-title">Radio Scanner</div>
+                <div class="jammer-refersh-channel-box tooltip" title="Refresh"></i>
+                    <i class="fa-solid fa-rotate refersh-radio-btn"></i>
+                </div>
+            </div>
+            <div class="jammer-channel-cont">
+                <div class="jammer-channel">
+                    <h5 class="jammer-channel-name"><i class="fa-solid fa-satellite-dish"></i> 33 <span class="jammer-mtr-text">7 Mtr</span> </h5>
+                </div>
+                <div class="jammer-channel">
+                    <h5 class="jammer-channel-name"> <i class="fa-solid fa-satellite-dish"></i> 101 <span  class="jammer-mtr-text">17 Mtr</span></h5>
+                </div>
+            </div>
+            <div class="jammer-no-channel-cont">
+                <h4>No Signal Nearby</h4>
+            </div>
+        </div>
+        <div class="jammer-btn-cont">
+            <i class="fa-solid fa-power-off jammer-btn"></i>
+        </div>
+    </div>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/qtip2/3.0.3/jquery.qtip.min.js"></script>
+     <script src="main.js"></script>
+</body>
+
+</html>

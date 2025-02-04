@@ -1,0 +1,14 @@
+{
+    "MyDutyPanelTitle": "My Duty Panel",
+    "ClosePanel": "X",
+    "CompanyManagement": "Company Management",
+    "MyDutyPanel": "My Duty Panel",
+    "Day": "Day",
+    "Week": "Week",
+    "Month": "Month",
+    "Year": "Year",
+    "CompanyDutyPanel": "Company Duty Panel",
+    "SelectedDayLabel": "Selected Day",
+    "HoursOfDutyLabel": "Hours of duty",
+	"HoursOfEmployeesDutyLabel": "Total Hours of Employees"
+}

@@ -1,0 +1,54 @@
+{
+    "Keys": [
+		{
+			"key": "M",
+			"title": "Phone",
+			"description": "Press M For Phone"
+		},
+		{
+			"key": "TAB",
+			"title": "Inventory",
+			"description": "Press TAB For Inventory"
+		}
+	],
+
+    "News": [
+		{
+			"title": "Gen Z",
+			"subtitle": "Gen Z RP brought to you by ",
+			"description": "Welcome to the  Gen-Z RolePlay. We have room for all kinds of work. Reality available, exclusive homes, cars and custom sounds, serious role-playing & for questions you can open a ticket at Discord - we have an active team waiting just for you (24/7)! If you really expected a lot of time for a quality server and have not found it by now, we promise you that you are going to enjoy every moment with us. We will make sure to provide you with the best experience. Thank you for taking part with us on the server..",
+			"image": "standard.gif"
+		}
+	],
+
+	"Authors": [
+		{
+			"name": "OX",
+			"rank": "Owner",
+			"image": "user.gif" 
+		},
+		{
+			"name": "ProfessorEX",
+			"rank": "Owner & Dev",
+			"image": "mahfuz.gif" 
+		},
+		{
+			"name": "AXiS",
+			"rank": "Owner & Dev",
+			"image": "axis.gif"
+		},
+		{
+			"name": "UXoen",
+			"rank": "Brand Ambassador",
+			"image": "uxeon.png"
+		}
+	],
+
+    "Music": [
+        {
+            "songname": "Gen Z RolePlay",
+            "owner": "Gen Z Team",
+            "path": "music/dolo.mp3" 
+        }
+    ]
+}
